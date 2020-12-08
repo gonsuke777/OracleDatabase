@@ -5,10 +5,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class AC_UCPSample {
-  final static String DB_URL=   "jdbc:oracle:thin:@ayuatp1_tp?TNS_ADMIN=/home/opc/work/wallet";
+  final static String DB_URL=   "jdbc:oracle:thin:@ayuatp1_tp?TNS_ADMIN=C:/tools/wallet/Wallet_AYUATP1";
   final static String DB_USER = "ADMIN";
   final static String DB_PASSWORD = "xxx";
-  final static String CONN_FACTORY_CLASS_NAME = "oracle.jdbc.pool.OracleDataSource";
+  final static String CONN_FACTORY_CLASS_NAME = "oracle.jdbc.replay.OracleDataSourceImpl";
 
   /*
    * The sample demonstrates UCP as client side connection pool.
