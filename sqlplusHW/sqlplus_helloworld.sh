@@ -2,7 +2,8 @@
 ################################################################
 #
 # Overview: This shell outputs "Hello, world!" by the sqlplus.
-# Pre-requirement: Put sqlplus_helloworld.sql in the same directory.
+# Pre-requirement1: Put sqlplus_helloworld.sql and decrypt_password.sh in the same directory.
+# Pre-requirement2: Write the encrypted password by encrypt_password.sh in the env file.
 # Usage: sqlplus_helloworld.sh $1
 # $1 ... Environment variable file.
 #
