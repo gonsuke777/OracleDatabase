@@ -17,7 +17,7 @@ set -eu
 # Set enviroment variable
 . "$1"
 mypath=$(dirname "${0}")
-logname=$(date +'sqlplus_helloworld_sql_%Y%m%d_%H%M%S.log')
+logname=$(date +"sqlplus_helloworld_sql_%Y%m%d_%H%M%S_$$.log")
 logfile="${mypath}/${logname}"
 
 # Start message.
@@ -40,11 +40,11 @@ EOF
 # Error check
 error_cnt=$(grep -Eic "^ORA-[0-9]+|SP2-[0-9]+" "${logfile}") || :
 if [ "${ret}" -eq 0 ] && [ "${error_cnt}" -eq 0 ]; then
-  date +'%Y-%m-%dT%H:%M:%S%:z SQL completed successfully.' >> "${logfile}"
   date +'%Y-%m-%dT%H:%M:%S%:z SQL completed successfully.'
+  date +'%Y-%m-%dT%H:%M:%S%:z SQL completed successfully.' >> "${logfile}"
   exit 0
 else
-  date +'%Y-%m-%dT%H:%M:%S%:z SQL terminated abnormally.' >> "${logfile}"
   date +'%Y-%m-%dT%H:%M:%S%:z SQL terminated abnormally.'
+  date +'%Y-%m-%dT%H:%M:%S%:z SQL terminated abnormally.' >> "${logfile}"
   exit 1
 fi

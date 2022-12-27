@@ -1,8 +1,8 @@
 #!/bin/sh
-# This script decrypt the encrypted password by machine-id.
+# This script decrypt the encrypted password by /etc/machine-id.
 # The machine-id is unique for each virtual machine, and only that virtual machine can correctly decrypt the password.
-# Therefore, even if this script is compromised, the original password cannot be decrypted.
-# Write the encrypted password by the encrypted_password.sh in the customer_encrypted_password of this script.
+# Therefore, even if encrypted password is compromised, the original password cannot be decrypted.
+# Store the encrypted password in a env file, environment variable, or others...
 # This script was referenced in the following article. Thanks!
 # https://qiita.com/kazuhidet/items/122c9986ca0edd5284ff
 

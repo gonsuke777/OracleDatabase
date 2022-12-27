@@ -1,5 +1,5 @@
 #!/bin/sh
-# This script encrypt strings by machine-id.
+# This script encrypt strings by /etc/machine-id.
 # Set the string to be encrypted as the 1st parameter of this shell.
 # To prevent the pre-encrypt strings from remaining in the history, 
 # it is recommended to put the strings in a separate file and run as follows.
